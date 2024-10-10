@@ -1,0 +1,56 @@
+.gradient-custom-3 {
+  background: #84fab0;
+
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(132, 250, 175, 0.452),
+    rgba(143, 211, 244, 0.5)
+  );
+
+  background: linear-gradient(
+    to right,
+    rgba(132, 250, 176, 0.5),
+    rgba(143, 211, 244, 0.5)
+  );
+}
+.gradient-custom-4 {
+  background: #84fab0;
+
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(132, 250, 176, 1),
+    rgba(143, 211, 244, 1)
+  );
+
+  background: linear-gradient(
+    to right,
+    rgba(132, 250, 176, 1),
+    rgba(143, 211, 244, 1)
+  );
+}
+.form-control:focus {
+  border: 1px solid;
+  border-color: rgba(143, 211, 244, 1);
+  box-shadow: none;
+}
+
+
+/* password field */
+.password-wrap {
+  position: relative;
+}
+
+.password-wrap i {
+  position: absolute;
+  top: 33px;
+  right: 0;
+  height: 36px;
+  width: 36px;
+  background-color: #84fab0;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  line-height: 36px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
