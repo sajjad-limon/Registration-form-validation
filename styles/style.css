@@ -43,7 +43,7 @@
 .password-wrap i {
   position: absolute;
   top: 33px;
-  right: 0;
+  right: 1px;
   height: 36px;
   width: 36px;
   background-color: #84fab0;
