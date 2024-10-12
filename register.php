@@ -36,7 +36,7 @@
 
                 <div class="form-outline mb-4">
                   <label class="form-label">Name</label>
-                  <input name="name" type="text" class="form-control" placeholder="Enter your name"/>
+                  <input name="name" style="border-color: <?= isset($_SESSION['name_error']) ? 'red' : '' ?>" type="text" class="form-control" placeholder="Enter your name"/>
                   <?php if(isset($_SESSION['name_error'])) { ?>
                     <span class="text-danger"> <?= $_SESSION['name_error'] ?> </span>
                     <?php }; unset($_SESSION['name_error']); ?>
@@ -44,7 +44,7 @@
 
                 <div class="form-outline mb-4">
                   <label class="form-label">Email</label>
-                  <input name="email" type="text" class="form-control" placeholder="Enter your email"/>
+                  <input name="email" style="border-color: <?= isset($_SESSION['email_error']) ? 'red' : '' ?>" type="text" class="form-control" placeholder="Enter your email"/>
                     <?php if(isset($_SESSION['email_error'])){ ?>
                       <span class="text-danger"> <?= $_SESSION['email_error'] ?> </span>
                       <?php } unset($_SESSION['email_error']); ?>
@@ -52,7 +52,7 @@
                 
                 <div class="form-outline mb-4 password-wrap">
                   <label class="form-label">Password</label>
-                  <input name="password" id="pass_field" type="password" class="form-control" placeholder="Enter your password"/>
+                  <input name="password" id="pass_field" style="border-color: <?= isset($_SESSION['pass_error']) ? 'red' : '' ?>" type="password" class="form-control" placeholder="Enter your password"/>
                   <i id="pass_icon" class="fa fa-eye"></i>
                   <?php if(isset($_SESSION['pass_error'])){ ?>
                       <span class="text-danger"> <?= $_SESSION['pass_error'] ?> </span>
@@ -63,13 +63,13 @@
                   <label class="form-label">Select Gender</label>
                   
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="gender1" value="male">
+                    <input class="form-check-input" style="border-color: <?= isset($_SESSION['gender_error']) ? 'red' : '' ?>" type="radio" name="gender" id="gender1" value="male">
                     <label class="form-check-label" for="gender1">
                       Male
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="gender2" value="female">
+                    <input class="form-check-input" style="border-color: <?= isset($_SESSION['gender_error']) ? 'red' : '' ?>" type="radio" name="gender" id="gender2" value="female">
                     <label class="form-check-label" for="gender2">
                       Female
                     </label>
