@@ -44,12 +44,13 @@
 
                 <div class="form-outline mb-4">
                   <label class="form-label">Email</label>
-                  <input name="email" style="border-color: <?= isset($_SESSION['email_error']) ? 'red' : '' ?>" type="text" class="form-control" placeholder="Enter your email"/>
-                    <?php if(isset($_SESSION['email_error'])){ ?>
+                  <input name="email" style="border-color: <?= isset($_SESSION['email_error']) ? 'red' : ''  ?>" type="email" class="form-control" placeholder="Enter your email"/>
+                     <?php if(isset($_SESSION['email_error'])){ ?>
                       <span class="text-danger"> <?= $_SESSION['email_error'] ?> </span>
-                      <?php } unset($_SESSION['email_error']); ?>
-                </div>
-                
+                       <?php } unset($_SESSION['email_error']); ?>
+                </div> 
+
+
                 <div class="form-outline mb-4 password-wrap">
                   <label class="form-label">Password</label>
                   <input name="password" id="pass_field" style="border-color: <?= isset($_SESSION['pass_error']) ? 'red' : '' ?>" type="password" class="form-control" placeholder="Enter your password"/>
@@ -80,7 +81,6 @@
                       <?php } unset($_SESSION['gender_error']); ?>
                 </div>
 
-
                 <div class="button-area d-flex justify-content-center align-items-center">
                   <input type="submit" class="btn btn-success btn-block" value="Register">
                 </div>
@@ -107,9 +107,13 @@
     var passField = document.getElementById('pass_field');
     if(passField.type == 'password') {
       passField.type = 'text';
+      $('#pass_icon').removeClass('fa fa-eye');
+      $('#pass_icon').addClass('fa fa-eye-slash');
     }
     else{
       passField.type = 'password';
+      $('#pass_icon').removeClass('fa fa-eye-slash');
+      $('#pass_icon').addClass('fa fa-eye');
     }
   })
 </script>
